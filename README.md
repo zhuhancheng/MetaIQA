@@ -1,8 +1,8 @@
 # MetaIQA
 
 * If you find our work is useful, pleaes cite our paper:
-@ARTICLE{Zhu2020MetaIQA,
-author={H. {Zhu} and L. {Li} and J. {Wu} and W. {Dong} and G. {Shi}},
+@ARTICLE{Zhu2020MetaIQA, \\
+author={H. {Zhu} and L. {Li} and J. {Wu} and W. {Dong} and G. {Shi}}, \\
 title={MetaIQA: Deep Meta-learning for No-Reference Image Quality Assessment},
 journal   = {CoRR},
 year      = {2020},
