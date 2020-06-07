@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split
 import torch.optim as optim
 from torch.autograd import Variable
 from torchvision import models
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
 import warnings
 warnings.filterwarnings("ignore")
