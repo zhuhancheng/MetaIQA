@@ -316,7 +316,7 @@ def train_model():
                 inputs = data['image']
                 batch_size = inputs.size()[0]
                 labels = data['rating'].view(batch_size, -1)
-                labels = labels / 10.0
+                # labels = labels / 10.0
                 if use_gpu:
                     try:
                         inputs, labels = Variable(inputs.float().cuda()), Variable(labels.float().cuda())
@@ -337,7 +337,7 @@ def train_model():
                 inputs_val = data_val['image']
                 batch_size1 = inputs_val.size()[0]
                 labels_val = data_val['rating'].view(batch_size1, -1)
-                labels_val = labels_val / 10.0
+                # labels_val = labels_val / 10.0
                 if use_gpu:
                     try:
                         inputs_val, labels_val = Variable(inputs_val.float().cuda()), Variable(labels_val.float().cuda())
