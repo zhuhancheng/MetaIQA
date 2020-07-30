@@ -241,7 +241,7 @@ def computeSpearman(dataloader_valid, model):
             inputs = data['image']
             batch_size = inputs.size()[0]
             labels = data['rating'].view(batch_size, -1)
-            labels = labels / 100.0
+            # labels = labels / 100.0
             if use_gpu:
                 try:
                     inputs, labels = Variable(inputs.float().cuda()), Variable(labels.float().cuda())
@@ -307,7 +307,7 @@ def finetune_model():
                 inputs = data['image']
                 batch_size = inputs.size()[0]
                 labels = data['rating'].view(batch_size, -1)
-                labels = labels / 100.0
+                # labels = labels / 100.0
                 if use_gpu:
                     try:
                         inputs, labels = Variable(inputs.float().cuda()), Variable(labels.float().cuda())
