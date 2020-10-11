@@ -452,7 +452,6 @@ def train_model():
         dataloader_train, dataloader_valid = load_data('test', 0)
         model.eval()
         model.cuda()
-
         sp = computeSpearman(dataloader_valid, model)[0]
         if sp > spearman:
             spearman = sp
@@ -460,6 +459,9 @@ def train_model():
             # torch.save(best_model.cuda(),
             #        'model_IQA/TID2013_KADID10K_IQA_Meta_resnet18.pt')
         print('new srocc {:4f}, best srocc {:4f}'.format(sp, spearman))
+
+    torch.save(model.cuda(),
+           'model_IQA/TID2013_KADID10K_IQA_Meta_resnet18.pt')
 
 def exp_lr_scheduler(optimizer, epoch, lr_decay_epoch=2):
     """Decay learning rate by a factor of DECAY_WEIGHT every lr_decay_epoch epochs."""
